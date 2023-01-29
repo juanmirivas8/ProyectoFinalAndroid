@@ -1,4 +1,4 @@
-package com.example.proyecto2.ui
+package es.iesfranciscodelosrios.calificaciones.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,12 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.proyecto2.R
-import com.example.proyecto2.adapter.ExamenAdapter
-import com.example.proyecto2.databinding.ListActivityBinding
-import com.example.proyecto2.model.Examen
+import es.iesfranciscodelosrios.calificaciones.R
+
+import es.iesfranciscodelosrios.calificaciones.adapter.ExamenAdapter
+import es.iesfranciscodelosrios.calificaciones.databinding.ListActivityBinding
+
+import es.iesfranciscodelosrios.calificaciones.model.Examen
 
 class ListActivity: AppCompatActivity() {
     private lateinit var binding: ListActivityBinding

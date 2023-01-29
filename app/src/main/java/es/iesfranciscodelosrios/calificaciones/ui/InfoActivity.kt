@@ -1,8 +1,9 @@
-package com.example.proyecto2.ui
+package es.iesfranciscodelosrios.calificaciones.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.proyecto2.databinding.InfoActivityBinding
+import es.iesfranciscodelosrios.calificaciones.databinding.InfoActivityBinding
+
 
 class InfoActivity: AppCompatActivity() {
     private lateinit var binding: InfoActivityBinding

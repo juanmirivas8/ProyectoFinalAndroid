@@ -1,4 +1,4 @@
-package com.example.proyecto2.adapter
+package es.iesfranciscodelosrios.calificaciones.adapter
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.proyecto2.R
-import com.example.proyecto2.model.Examen
+import es.iesfranciscodelosrios.calificaciones.model.Examen
+import es.iesfranciscodelosrios.calificaciones.R
+
 
 class ExamenAdapter(private val examenList: ArrayList<Examen>, private val onItemClicked: (Examen) -> Unit) :RecyclerView.Adapter<ExamenAdapter.ViewHolder>(){
 class ViewHolder(view: View): RecyclerView.ViewHolder(view) {

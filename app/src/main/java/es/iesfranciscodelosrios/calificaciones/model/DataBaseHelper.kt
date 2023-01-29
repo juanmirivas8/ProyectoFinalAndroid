@@ -1,9 +1,8 @@
-package com.example.proyecto2.model
+package es.iesfranciscodelosrios.calificaciones.model
 
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
-import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import java.sql.Date
@@ -57,7 +56,7 @@ class DataBaseHelper(var context: Context) : SQLiteOpenHelper(context, DATABASE_
     }
 
     @SuppressLint("Range")
-    fun getExamen(id: Int): Examen{
+    fun getExamen(id: Int): Examen {
         val db = this.writableDatabase
         val cursor = db.rawQuery("SELECT * FROM $TABLE_NAME WHERE $COL_ID=?", arrayOf(id.toString()))
         cursor.moveToFirst()

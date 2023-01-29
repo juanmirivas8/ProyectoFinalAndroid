@@ -12,12 +12,12 @@
         app:tint="@color/white"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Proyecto2"
+        android:theme="@style/Theme.Calificaciones"
         tools:targetApi="31" >
 
         <activity android:name=".ui.ListActivity"
             android:exported="true"
-            android:theme="@style/Theme.Proyecto2.NoActionBar">
+            android:theme="@style/Theme.Calificaciones.NoActionBar">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

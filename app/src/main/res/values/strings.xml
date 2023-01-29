@@ -8,4 +8,16 @@
     <string name="tecnology">Android Studio</string>
     <string name="idioma">Español</string>
     <string name="info_activity_name">Información</string>
+    <string-array name="subjects">
+        <item>Matemáticas</item>
+        <item>Química</item>
+        <item>Física</item>
+        <item>Biología</item>
+        <item>Historia</item>
+        <item>Geografía</item>
+        <item>Programación</item>
+        <item>Ingles</item>
+        <item>Artes</item>
+        <item>Deportes</item>
+    </string-array>
 </resources>
