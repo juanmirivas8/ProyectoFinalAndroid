@@ -17,4 +17,8 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
+    <style name="datePickerTheme" parent="android:ThemeOverlay.Material.Dialog">
+        <item name="android:colorAccent">#6200EE</item>
+    </style>
 </resources>

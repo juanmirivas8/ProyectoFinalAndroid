@@ -6,6 +6,9 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import java.sql.Date
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class DataBaseHelper(var context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     //TODO: CAMBIA LOS NOMBRES
@@ -63,8 +66,9 @@ class DataBaseHelper(var context: Context) : SQLiteOpenHelper(context, DATABASE_
         val asignatura = Asignatura.valueOf(cursor.getString(cursor.getColumnIndex(COL_ASIGNATURA)))
         val nota = cursor.getInt(cursor.getColumnIndex(COL_NOTA))
         val fecha = cursor.getString(cursor.getColumnIndex(COL_FECHA))
+        val dateFormat = SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", Locale.getDefault())
         val titulo = cursor.getString(cursor.getColumnIndex(COL_TITULO))
-        return Examen(asignatura, nota, Date.valueOf(fecha), titulo, id)
+        return Examen(asignatura, nota, dateFormat.parse(fecha)!!, titulo, id)
     }
     @SuppressLint("Range")
     fun getAllExamenes(): ArrayList<Examen>{
@@ -78,7 +82,8 @@ class DataBaseHelper(var context: Context) : SQLiteOpenHelper(context, DATABASE_
                 val nota = cursor.getInt(cursor.getColumnIndex(COL_NOTA))
                 val fecha = cursor.getString(cursor.getColumnIndex(COL_FECHA))
                 val titulo = cursor.getString(cursor.getColumnIndex(COL_TITULO))
-                examenes.add(Examen(asignatura, nota, Date.valueOf(fecha), titulo, id))
+                val dateFormat = SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", Locale.getDefault())
+                examenes.add(Examen(asignatura, nota,dateFormat.parse(fecha)!!, titulo, id))
             }while(cursor.moveToNext())
         }
         return examenes

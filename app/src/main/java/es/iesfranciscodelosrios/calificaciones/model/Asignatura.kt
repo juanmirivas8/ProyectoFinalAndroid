@@ -20,4 +20,10 @@ enum class Asignatura(val nombre: String) {
     override fun toString(): String {
         return nombre
     }
+
+    companion object{
+        fun getConstantByName(name: String): Asignatura {
+            return Asignatura.values().first { it.nombre == name }
+        }
+    }
 }

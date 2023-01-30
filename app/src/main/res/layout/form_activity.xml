@@ -63,18 +63,17 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <Button
-        android:id="@+id/InsertBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Aceptar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbar"
-        app:layout_constraintVertical_bias="0.858" />
-
+            android:id="@+id/InsertBTN"
+            android:layout_width="178dp"
+            android:layout_height="41dp"
+            android:text="Aceptar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar"
+            app:layout_constraintVertical_bias="0.776" app:layout_constraintHorizontal_bias="0.502"/>
     <EditText
-            android:id="@+id/NamePT"
+            android:id="@+id/tituloPT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -88,32 +87,38 @@
             app:layout_constraintTop_toBottomOf="@+id/appbar"
             app:layout_constraintVertical_bias="0.046"/>
     <EditText
-            android:id="@+id/PhonePT"
+            android:id="@+id/notaPT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Nota"
-            android:inputType="textPersonName"
             android:minHeight="48dp"
             app:layout_constraintBottom_toTopOf="@+id/InsertBTN"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/NamePT"
-            app:layout_constraintVertical_bias="0.05"/>
+            app:layout_constraintTop_toBottomOf="@+id/tituloPT"
+            app:layout_constraintVertical_bias="0.05" android:inputType="number"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="date"
             android:ems="10"
             android:id="@+id/fechaPT"
-            app:layout_constraintTop_toBottomOf="@+id/PhonePT" android:layout_marginTop="28dp" android:hint="Fecha"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"/>
+            app:layout_constraintTop_toBottomOf="@+id/notaPT" android:layout_marginTop="28dp" android:hint="Fecha"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="96dp"/>
     <Spinner
             android:layout_width="208dp"
             android:layout_height="34dp" android:id="@+id/asignaturaPT"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="100dp" app:layout_constraintTop_toBottomOf="@+id/fechaPT"
-            android:layout_marginTop="32dp" android:entries="@array/subjects"/>
+            android:layout_marginTop="32dp"/>
+    <Button
+            android:text="Eliminar"
+            android:layout_width="179dp"
+            android:layout_height="41dp" android:id="@+id/deleteBtn"
+            android:layout_marginTop="28dp"
+            app:layout_constraintTop_toBottomOf="@+id/InsertBTN" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

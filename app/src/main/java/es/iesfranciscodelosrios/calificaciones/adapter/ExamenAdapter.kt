@@ -8,6 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import es.iesfranciscodelosrios.calificaciones.model.Examen
 import es.iesfranciscodelosrios.calificaciones.R
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class ExamenAdapter(private val examenList: ArrayList<Examen>, private val onItemClicked: (Examen) -> Unit) :RecyclerView.Adapter<ExamenAdapter.ViewHolder>(){
@@ -25,9 +28,9 @@ class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         runCatching {
-            holder.asignatura.text = examenList[position].asignatura.toString()
-            holder.nota.text = examenList[position].nota.toString()
-            holder.fecha.text = examenList[position].fecha.toString()
+            holder.asignatura.text ="Asignatura: " +  examenList[position].asignatura.toString()
+            holder.nota.text ="Nota: " + examenList[position].nota.toString()
+            holder.fecha.text ="Fecha: " +  transformDate(examenList[position].fecha)
             holder.titulo.text = examenList[position].titulo
             holder.itemView.setOnClickListener {
                 onItemClicked.invoke(examenList[position])
@@ -39,4 +42,10 @@ class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
     }
 
     override fun getItemCount(): Int = examenList.size
+    private fun transformDate(date: Date): String {
+        val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        return dateFormat.format(date)
+    }
+
+
 }
