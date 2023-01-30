@@ -4,6 +4,7 @@ package es.iesfranciscodelosrios.calificaciones.ui
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import es.iesfranciscodelosrios.calificaciones.databinding.FormActivityBinding
 import es.iesfranciscodelosrios.calificaciones.model.Asignatura
@@ -45,6 +46,8 @@ class FormActivity: AppCompatActivity() {
                     )
                     db.addData(exam)
                     onBackPressed()
+                }else{
+                    Toast.makeText(this, "Rellena todos los campos", Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -74,6 +77,8 @@ class FormActivity: AppCompatActivity() {
                     )
                     db.updateData(exam)
                     onBackPressed()
+                }else{
+                    Toast.makeText(this, "Rellena todos los campos", Toast.LENGTH_SHORT).show()
                 }
             }
         }
